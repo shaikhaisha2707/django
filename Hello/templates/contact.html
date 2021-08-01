@@ -4,28 +4,30 @@
 {%endblock title%}
 
 {%block body%}
-<div class="container-fluid"  align="center">
-<img src="/static/contact.jpg"  class="d-block my-2 " width="1500" height="500"  alt="..." >
-<h2>Contact Details</h2>
-<marquee>Please fill your Contact details</marquee>
-<form method="post" action="/contact">
-{% csrf_token %}
+<div class="container-fluid" align="center">
+  <img src="/static/contact.jpg" class="d-block my-2 " width="1500" height="500" alt="...">
 </div>
-<div class="container px-2 my-2"  align="center">
-<div class="mb-3">
-  <label for="name" class="form-label">Name</label>
-  <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" >
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
-</div>
-<div class="mb-3">
-  <label for="phone" class="form-label">Phone Number</label>
-  <input type="phone" class="form-control" id="phone" placeholder="Phone Number">
-</div>
-<button class="btn btn-primary" type="submit" value="Submit">Submit</button>
-</div>
-</form>
+<div class="container" align="center">
+  <h2>Contact Details</h2>
+  <marquee>Please fill your Contact details</marquee>
+  <form method="post" action="/contact">
+    {% csrf_token %}
+
+    <div class="container px-2 my-2" align="center">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+      </div>
+      <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+    </div>
+  </form>
 </div>
 {%endblock body%}
