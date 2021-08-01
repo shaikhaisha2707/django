@@ -4,16 +4,17 @@
 {%endblock title%}
 
 {%block body%}
-<div class="container-fluid" align="center">
+
+<div class="container-fluid" style="background-color: burlywood;" align="center">
   <img src="/static/contact.jpg" class="d-block my-2 " width="1500" height="500" alt="...">
 </div>
-<div class="container" align="center">
+<div class="container" style="background-color: gold;" align="center">
   <h2>Contact Details</h2>
   <marquee>Please fill your Contact details</marquee>
   <form method="post" action="/contact">
     {% csrf_token %}
 
-    <div class="container px-2 my-2" align="center">
+    <div class="container px-2 my-2" style="background-color: burlywood;" align="center">
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
@@ -29,5 +30,8 @@
       <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
     </div>
   </form>
+
 </div>
+
+
 {%endblock body%}

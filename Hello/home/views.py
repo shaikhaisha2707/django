@@ -17,7 +17,7 @@ def index(request):
         'variables':'This is a variable',
 
     }
-    messages.success(request,"This is a test msg")
+    messages.success(request,"Welcome To Chocolate Website!")
 
     return render(request,'index.html',context)
     
